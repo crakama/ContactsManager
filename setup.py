@@ -45,7 +45,7 @@ setup(
     version = __version__,
     description = 'A Contacts Manager command line program in Python.',
     long_description = long_description,
-    url = 'https://github.com/crakama/ContactsManager-Console',
+    url = 'https://github.com/crakama/ContactsManager',
     author = 'Catherine Rakama',
     author_email = 'crakama89@gmail.com',
     license = 'UNLICENSE',
@@ -64,7 +64,7 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
     keywords = 'cmapp',
-    packages = find_packages(exclude=[ 'cmapp','docs', 'tests*']),
+    packages = [ 'cmapp','docs', 'tests*'],
     install_requires = ['docopt'],
     extras_require = {
         'test': ['coverage', 'pytest', 'pytest-cov'],
