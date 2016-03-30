@@ -1,18 +1,18 @@
-"""
-Usage: cmapp
-    cmapp add (-n <name> -m <mobile>)
-    cmapp (-i | --interactive)
+"""Usage: cmapp
+        cmapp add (-n <name> -m <mobile>)
+        cmapp (-i | --interactive)
 
 Options:
     -s, --start  Interactive Mode
     -h, --help  Show this screen and exit.
-    -m          Starts creating note body
 """
+
 
 import sys
 import os
 import cmd
 from docopt import docopt, DocoptExit
+from crudoperations import CrudOperations
 
 
 
@@ -69,20 +69,17 @@ class CMapp(cmd.Cmd):
 opt = docopt(__doc__, sys.argv[1:])
 
 
-"""Creates a newnote,saving it
+"""Creates a new contact
 """
 
 
 def addcontact(docopt_args):
     if docopt_args["-n <name>"] and docopt_args["-m <mobile>"]:
-        with indent(4, quote=' >'):
-       
-    name = docopt_args["<name>"]
-    mobilenum = docopt_args["<mobile>"]
-    contacts = CrudOperations()
-    contacts.save(contactname=name, contactnumber=mobilenum)
-    with indent(4, quote='√ '):
-        puts(colored.green("Successfully saved"))
+        name = docopt_args["<name>"]
+        mobilenum = docopt_args["<mobile>"]
+        contacts = CrudOperations()
+        contacts.save(contactname=name, contactnumber=mobilenum)
+    
 
 if opt['--start']:
 

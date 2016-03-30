@@ -5,7 +5,7 @@ from codecs import open
 from os.path import abspath, dirname, join
 from subprocess import call
 
-from setuptools import Command, find_packages, setup
+from setuptools import Command, setup
 
 from cmapp import __version__
 

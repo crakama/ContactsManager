@@ -1,0 +1,3 @@
+[console_scripts]
+cmapp = cmapp.cli_entrypoint:main
+
