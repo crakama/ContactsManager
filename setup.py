@@ -64,7 +64,7 @@ setup(
         'Programming Language :: Python :: 3.4',
     ],
     keywords = 'cmapp',
-    packages = [ 'cmapp','docs', 'tests*'],
+    packages = [ 'cmapp', 'tests*'],
     install_requires = ['docopt'],
     extras_require = {
         'test': ['coverage', 'pytest', 'pytest-cov'],
