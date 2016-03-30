@@ -13,8 +13,7 @@ import sys
 import os
 import cmd
 from docopt import docopt, DocoptExit
-from colorama import init
-from colorama import init, Fore, Back, Style
+
 
 
 
@@ -64,7 +63,7 @@ class CMapp(cmd.Cmd):
 
     	"""Exit application."""
 
-    	print('See you later!')
+    	print('Exited!')
         exit()
 
 opt = docopt(__doc__, sys.argv[1:])
@@ -85,11 +84,11 @@ def addcontact(docopt_args):
     with indent(4, quote='√ '):
         puts(colored.green("Successfully saved"))
 
-# if opt['--start']:
+if opt['--start']:
 
-#     CMapp().cmdloop()  # creates the REPL
+    CMapp().cmdloop()  # creates the REPL
 
-# print(opt) 
+print(opt) 
 # opt = docopt(__doc__, sys.argv[1:])
 
 # if opt['--start']:
@@ -99,6 +98,6 @@ def addcontact(docopt_args):
 #         pass
 #     except KeyboardInterrupt:
 #         pass
-if __name__ == '__main__':
-    CMapp().cmdloop()
+# if __name__ == '__main__':
+#     CMapp().cmdloop()
 
